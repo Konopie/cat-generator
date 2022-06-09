@@ -9,4 +9,3 @@ var catFacts = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc57
         console.log(data[0].url);
     })
 });
-
