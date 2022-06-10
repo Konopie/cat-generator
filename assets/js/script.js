@@ -13,6 +13,7 @@ var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(respo
 function displayFact() {
     var factText = document.createElement('p');
     factText.textContent = catFacts;
+    //factText.headers[“9bb08deb-5ca2-4b0a-8d06-d8b038ad07dc”] = catFacts;
     document.getElementById('factHandler').appendChild(factText);
 }
 
