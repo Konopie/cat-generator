@@ -1,3 +1,4 @@
+
 // fetch cat fact array
 fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
     response.json().then(function(data) {
