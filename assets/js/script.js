@@ -42,8 +42,8 @@ function displayFact() {
 
 // fetch cat picture url
 
-var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
-function fetchUrl(catImageUrl){
+//var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
+function fetchUrl(){
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
     fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
@@ -54,7 +54,7 @@ function fetchUrl(catImageUrl){
         displayImage();
     })
 })};
-});
+
 
 // push custom image url into image handler
 function displayImage() {
@@ -73,13 +73,13 @@ factBtn.addEventListener("click", fetchFacts);
 
 picBtn.addEventListener("click", fetchUrl);
 
-favoriteBtn.addEventListener('click', fetchFacts);
-   var storage=JSON.parse(localStorage.getItem('displayFact')) 
+favoriteBtn.addEventListener('click', fetchUrl);
+   var storage=JSON.parse(localStorage.getItem('displayImage')) 
   if (storage ===null) {
    storage= []
    }
-   storage.push(displayFact);
+   storage.push(displayImage);
    localStorage.setItem('displayFact', JSON.stringify(storage))
-   console.log(displayFact);
+   console.log(displayImage);
   
 
