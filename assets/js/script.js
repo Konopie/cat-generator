@@ -72,12 +72,14 @@ function displayImage() {
 // *Bethany button event listener
 factBtn.addEventListener("click", fetchFacts);
 
-picBtn.addEventListener("click", fetchUrl());
+picBtn.addEventListener("click", fetchUrl);
 
 favoriteBtn.addEventListener('click', function () {
+    
    var userData= {
       picture: picBtn,
         fact: factBtn 
+
     }
    var storage=JSON.parse(localStorage.getItem('picBtn')) 
    if (storage ===null) {
