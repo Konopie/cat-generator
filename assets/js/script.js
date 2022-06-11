@@ -9,7 +9,7 @@
 =======
 var picBtn = document.querySelector("#pic-generator");
 
-// fetch cat fact array
+// **Bethany fetch cat fact array
 var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
     response.json().then(function(data) {
         console.log(data);
@@ -19,9 +19,10 @@ var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(respo
 });
 >>>>>>> 57773856d65284267c89e850bd1dc969d9c0b6a1
 
-//push cat fact into fact handler
+// **Bethany push cat fact into fact handler
 function displayFact() {
     var factText = document.createElement('p');
+    factText.textContent = catFacts;
     factText.textContent = catFacts;
     document.getElementById('factHandler').appendChild(factText);
 }
