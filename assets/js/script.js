@@ -1,10 +1,3 @@
-//// fetch cat fact array
-//// a7e6c2641e3a2f2e677f932fd90cab309e80a2ce
-//fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-   // response.json().then(function(data) {
-     //   console.log(data);
-  //  })
-//});
 var picBtn = document.querySelector("#pic-generator");
 var favoriteBtn=document.querySelector(".favorite");
 
@@ -16,11 +9,34 @@ var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(respo
         displayFact();
     })
 });
+var picBtn = document.querySelector("#pic-generator");
+//  "Cat Fact" button
+var factBtn = document.querySelector("#fact-generator");
 
-//push cat fact into fact handler
+// **Bethany fetch cat facts
+function fetchFacts() {
+    if (document.getElementById("factHandler").contains(document.querySelector(".fact"))) {
+        document.getElementById("factHandler").removeChild(document.querySelector(".fact"))
+    };
+    fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+            var randomNumber = Math.floor(Math.random() * data.length);
+            catFacts = data[randomNumber].text;
+            displayFact();
+        })
+    });
+}
+
+//  push cat fact into fact handler
 function displayFact() {
+    // create p element for facts
     var factText = document.createElement('p');
+    // css class
+    factText.className = "fact";
+    //set url/source
     factText.textContent = catFacts;
+    // append to page
     document.getElementById('factHandler').appendChild(factText);
 }
 
@@ -53,6 +69,8 @@ function displayImage() {
     // append img to page
     document.getElementById('imageHandler').appendChild(img); 
 } 
+// *Bethany button event listener
+factBtn.addEventListener("click", fetchFacts);
 
 picBtn.addEventListener("click", fetchUrl());
 
