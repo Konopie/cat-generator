@@ -3,7 +3,7 @@ var favoriteBtn=document.querySelector(".favorite");
 //  "Cat Fact" button
 var factBtn = document.querySelector("#fact-generator");
 
-// **Bethany fetch cat facts
+// fetch cat facts
 function fetchFacts() {
     if (document.getElementById("factHandler").contains(document.querySelector(".fact"))) {
         document.getElementById("factHandler").removeChild(document.querySelector(".fact"))
