@@ -1,15 +1,6 @@
 var picBtn = document.querySelector("#pic-generator");
+//"favorite" button
 var favoriteBtn=document.querySelector(".favorite");
-
-// fetch cat fact array
-var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-    response.json().then(function(data) {
-        console.log(data);
-        catFacts = data[0].text;
-        displayFact();
-    })
-});
-var picBtn = document.querySelector("#pic-generator");
 //  "Cat Fact" button
 var factBtn = document.querySelector("#fact-generator");
 
@@ -52,7 +43,7 @@ function displayFact() {
 // fetch cat picture url
 
 var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
-function fetchUrl(){
+function fetchUrl(catImageUrl){
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
     fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
@@ -82,18 +73,13 @@ factBtn.addEventListener("click", fetchFacts);
 
 picBtn.addEventListener("click", fetchUrl);
 
-favoriteBtn.addEventListener('click', function () {
-    
-   var userData= {
-      picture: picBtn,
-        fact: factBtn 
+favoriteBtn.addEventListener('click', fetchFacts);
+   var storage=JSON.parse(localStorage.getItem('displayFact')) 
+  if (storage ===null) {
+   storage= []
+   }
+   storage.push(displayFact);
+   localStorage.setItem('displayFact', JSON.stringify(storage))
+   console.log(displayFact);
+  
 
-    }
-   var storage=JSON.parse(localStorage.getItem('picBtn')) 
-   if (storage ===null) {
-    storage= []
-    }
-   storage.push(userData)
-  / localStorage.setItem('picBtn', JSON.stringify(storage))
-  window.location.href='favorites.html'
-})
