@@ -1,43 +1,40 @@
-<<<<<<< HEAD
-//// fetch cat fact array
-//// a7e6c2641e3a2f2e677f932fd90cab309e80a2ce
-//fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-   // response.json().then(function(data) {
-     //   console.log(data);
-  //  })
-//});
-=======
 var picBtn = document.querySelector("#pic-generator");
+//  **Bethany "Cat Fact" button
+var factBtn = document.querySelector("#fact-generator");
 
-// **Bethany fetch cat fact array
-var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-    response.json().then(function(data) {
-        console.log(data);
-        catFacts = data[0].text;
-        displayFact();
-    })
-});
->>>>>>> 57773856d65284267c89e850bd1dc969d9c0b6a1
+// **Bethany fetch cat facts
+function fetchFacts() {
+    if (document.getElementById("factHandler").contains(document.querySelector(".fact"))) {
+        document.getElementById("factHandler").removeChild(document.querySelector(".fact"))
+    };
+    fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+            var randomNumber = Math.floor(Math.random() * data.length);
+            catFacts = data[randomNumber].text;
+            displayFact();
+        })
+    });
+}
 
 // **Bethany push cat fact into fact handler
 function displayFact() {
+    // create p element for facts
     var factText = document.createElement('p');
+    // css class
+    factText.className = "fact";
+    //set url/source
     factText.textContent = catFacts;
-    factText.textContent = catFacts;
+    // append to page
     document.getElementById('factHandler').appendChild(factText);
 }
 
 
 // fetch cat picture url
-<<<<<<< HEAD
-
-var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
-=======
 function fetchUrl(){
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
     fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
->>>>>>> 57773856d65284267c89e850bd1dc969d9c0b6a1
     response.json().then(function(data) {
         // set variable to fetched url
         catImageUrl = data[0].url;
@@ -58,6 +55,8 @@ function displayImage() {
     // append img to page
     document.getElementById('imageHandler').appendChild(img); 
 } 
+// *Bethany button event listener
+factBtn.addEventListener("click", fetchFacts);
 
 picBtn.addEventListener("click", fetchUrl);
 
