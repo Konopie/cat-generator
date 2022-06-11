@@ -1,26 +1,8 @@
 var picBtn = document.querySelector("#pic-generator");
 var favoriteBtn=document.querySelector(".favorite");
-
-// fetch cat fact array
-var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-    response.json().then(function(data) {
-        console.log(data);
-        catFacts = data[0].text;
-        displayFact();
-    })
-});
-var picBtn = document.querySelector("#pic-generator");
 //  "Cat Fact" button
 var factBtn = document.querySelector("#fact-generator");
 
-// fetch cat fact array
-var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
-    response.json().then(function(data) {
-        console.log(data);
-        catFacts = data[0].text;
-        displayFact();
-    })
-});
 // **Bethany fetch cat facts
 function fetchFacts() {
     if (document.getElementById("factHandler").contains(document.querySelector(".fact"))) {
@@ -51,7 +33,7 @@ function displayFact() {
 
 // fetch cat picture url
 
-var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
+//var catImageUrl = "thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294"
 function fetchUrl(){
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
@@ -63,7 +45,7 @@ function fetchUrl(){
         displayImage();
     })
 })};
-});
+
 
 // push custom image url into image handler
 function displayImage() {
