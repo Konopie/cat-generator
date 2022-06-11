@@ -1,5 +1,5 @@
 var picBtn = document.querySelector("#pic-generator");
-//  **Bethany "Cat Fact" button
+//  "Cat Fact" button
 var factBtn = document.querySelector("#fact-generator");
 
 // **Bethany fetch cat facts
@@ -17,7 +17,7 @@ function fetchFacts() {
     });
 }
 
-// **Bethany push cat fact into fact handler
+//  push cat fact into fact handler
 function displayFact() {
     // create p element for facts
     var factText = document.createElement('p');
