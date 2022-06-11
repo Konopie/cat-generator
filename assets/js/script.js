@@ -1,6 +1,6 @@
 var picBtn = document.querySelector("#pic-generator");
 
-// fetch cat fact array
+// **Bethany fetch cat fact array
 var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(response) {
     response.json().then(function(data) {
         console.log(data);
@@ -9,11 +9,11 @@ var catFacts = fetch("https://cat-fact.herokuapp.com/facts").then(function(respo
     })
 });
 
-//push cat fact into fact handler
+// **Bethany push cat fact into fact handler
 function displayFact() {
     var factText = document.createElement('p');
     factText.textContent = catFacts;
-    //factText.headers[“9bb08deb-5ca2-4b0a-8d06-d8b038ad07dc”] = catFacts;
+    factText.textContent = catFacts;
     document.getElementById('factHandler').appendChild(factText);
 }
 
