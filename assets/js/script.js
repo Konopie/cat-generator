@@ -56,16 +56,16 @@ function displayImage() {
 
 picBtn.addEventListener("click", fetchUrl());
 
-//favoriteBtn.addEventListener('click', function () {
-  //  var userData= {
-     //   picture: picBtn,
-        //fact: factBtn 
-    //}
-   // var storage=JSON.parse(localStorage.getItem('picBtn')) 
-   /// if (storage ===null) {
-       // storage= []
-   // }
-  //  storage.push(userData)
-  //  localStorage.setItem('picBtn', JSON.stringify(storage))
-  //  window.location.href='favorites.html'
-//})
+favoriteBtn.addEventListener('click', function () {
+   var userData= {
+      picture: picBtn,
+        fact: factBtn 
+    }
+   var storage=JSON.parse(localStorage.getItem('picBtn')) 
+   if (storage ===null) {
+    storage= []
+    }
+   storage.push(userData)
+  / localStorage.setItem('picBtn', JSON.stringify(storage))
+  window.location.href='favorites.html'
+})
