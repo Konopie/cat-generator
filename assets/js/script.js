@@ -3,7 +3,7 @@ var favoriteBtn=document.querySelector(".favorite");
 //  "Cat Fact" button
 var factBtn = document.querySelector("#fact-generator");
 
-// **Bethany fetch cat facts
+// fetch cat facts
 function fetchFacts() {
     if (document.getElementById("factHandler").contains(document.querySelector(".fact"))) {
         document.getElementById("factHandler").removeChild(document.querySelector(".fact"))
@@ -32,13 +32,12 @@ function displayFact() {
 
 
 // fetch cat picture url
-
-//var catImageUrl = "thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294"
 function fetchUrl(){
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
     fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
     response.json().then(function(data) {
+        console.log(data)
         // set variable to fetched url
         catImageUrl = data[0].url;
         // display image after 
