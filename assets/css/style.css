@@ -4,14 +4,53 @@
     max-width: 69vw;
     max-height: 42.0vh;
 } 
-footer{
-    width: 100%;
-    padding: 40px 35px;
-    display: flex;
-    justify-content:space-between;
-    flex-wrap: wrap;
-} 
+
 .favorites    {
     line-height: 1.5;
     text-align: right;
 } 
+#factHandler{
+    margin-top: 700px; 
+    position: absolute;
+    margin-left: 700px;
+
+}
+
+#imageHandler{
+    margin-top: 400px;
+    position: absolute;
+    margin-left: 700px;
+}
+#genieLamp{
+    width: 9%;
+   position: absolute;
+    margin-bottom: 1000px;
+    margin-left: 880px;
+}
+
+#genieLamp2{
+    width: 9%;
+    position: absolute;
+     margin-bottom: 1000px;
+     margin-left: 488px;
+}
+#heading{
+    position: absolute;
+    width: 100%;
+    
+
+}
+#subheading{
+    position: absolute;
+    margin-top: 70px;
+    width: 100%
+}
+.breadcrumb{
+    position: absolute;
+    margin-top: 150px;
+}
+footer{
+    position: absolute;
+    margin-top: 1000px;
+    margin-left: 600px;
+}
