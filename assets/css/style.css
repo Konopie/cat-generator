@@ -1,9 +1,7 @@
-.catImage {
-    height:auto;
-    width: auto;
-    max-width: 69vw;
-    max-height: 42.0vh;
-} 
+img{
+    max-width:450px;
+    max-height:450px;
+}
 
 footer{
     width: 100%;
