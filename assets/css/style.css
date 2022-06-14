@@ -54,3 +54,31 @@ footer{
     margin-top: 1000px;
     margin-left: 600px;
 }
+footer{
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+} 
+.favorites    {
+    line-height: 1.5;
+    text-align: right;
+}  
+
+#favoritefact-container{
+   
+        background: transparent;
+        border: none;
+        resize: none;
+        color: #000000;
+        border-left: 1px solid black;
+        padding: 10px;
+      } 
+
+#favoritepic-container{
+    height:auto;
+    width: auto;
+    max-width: 69vw;
+    max-height: 42.0vh;
+} 
