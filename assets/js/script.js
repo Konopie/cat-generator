@@ -1,4 +1,4 @@
-var picBtn = document.querySelector("#pic-generator");
+         var picBtn = document.querySelector("#pic-generator");
 //**Mackenzie "Favorite" buttons
 var favoriteBtn1 = document.querySelector("#favorite1");
 var favoriteBtn2 = document.querySelector('#favorite2')
@@ -53,19 +53,9 @@ function fetchUrl() {
             // display image after 
             displayImage();
         })
-function fetchUrl(){
-    if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
-        document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))};
-    fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
-    response.json().then(function(data) {
-        console.log(data)
-        // set variable to fetched url
-        catImageUrl = data[0].url;
-        // display image after 
-        displayImage();
+
     });
-    });
-}})};
+};
 
 
 
