@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link to css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Group Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+    <title>Cat Genie Home</title>
 </head>
+
 <body> 
-    <div class="cat-facts" id="factHandler">
-        <button id="fact-generator" class="btn">Cat Fact</button>
-        <button id="favorite1">⭐</button>
+    
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">About</a></li>
+            
+            
+        </ul>
+    </nav>
+    <div>
+               <h1 id= "heading" class= "is-size-1 has-text-weight-bold has-text-warning has-background-danger-dark py-2 has-text-centered is-family-monospace is-italic">Cat Genie</h1>
+                <h2 id= "subheading" class= "is-size-5 has-text-warning has-background-danger-dark has-text-centered py-5 is-family-sans-serif">Where Your Wish For The Perfect Cat Comes True</h2>
+                <img src="./assets/images/lamp.png" alt="lamp image" style= "max-height: 90px" id="genieLamp">
+                <img src="./assets/images/lamp2.png" alt="second lamp image" style= "max-height: 90px" id="genieLamp2">
     </div>
-    <div class="cat-picture" id="imageHandler">
-        <button id="pic-generator" class="btn">Cat Picture</button>
-       <button id="favorite2">⭐</button>
-    </div>
+                
+    <section>
+
+          <div class="cat-facts" id="factHandler">
+              <button id="fact-generator" class= "button is-danger is-light is-large is-responsive is-outlined">Cat Fact</button>
+              <button class="favorite button is-danger is-responsive is-outlined">⭐</button>
+            </div>
+            <div class="cat-picture" id="imageHandler">
+                <button id="pic-generator" class="button is-danger is-light is-large is-responsive is-outlined">Cat Picture</button>
+                <button class="favorite button is-danger is-responsive is-outlined">⭐</button>
+            </div>
+    </section>   
+
+
+
+
         
 
 
@@ -28,9 +55,28 @@
 
     </div>
 
+    
+
+
+    
+          
+            
+    
+
+          
+    
+    
+  
+</body>
+<footer>
+    <div>
+        &copy; 2022 Cat Genie. All Rights Reserved.
+    </div>  
+</footer>
+
     <!-- link to javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
     integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
-</body>
+
 </html>
