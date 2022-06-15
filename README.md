@@ -12,10 +12,11 @@ We used "The Cat API" for the images on our application. https://apilist.fun/api
 We used "Cat Facts API" for the facts. https://alexwohlbruck.github.io/cat-facts/?ref=apilist.fun
 
 ### CSS Framework
-Bulma
+Bulma is a free open-source CSS framework that is designed for mobile first and built with flexbox. It is a beginner-friendly framework with documentation that is easy to understand. 
+https://bulma.io/
 
 ### Client-Side Storage
-**Forthcoming
+We utilized favorte (star) buttons. The user can store one favorite fact and one favorite picture in the favorites local storage container at the bottom of the page.
 
 ## Image of the Live Website
 **Forthcoming
@@ -24,3 +25,4 @@ Bulma
 https://konopie.github.io/cat-generator/
 
 ## Credits
+**Forthcoming
