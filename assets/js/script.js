@@ -1,4 +1,4 @@
-var picBtn = document.querySelector("#pic-generator");
+         var picBtn = document.querySelector("#pic-generator");
 //**Mackenzie "Favorite" buttons
 var favoriteBtn1 = document.querySelector("#favorite1");
 var favoriteBtn2 = document.querySelector('#favorite2')
@@ -48,7 +48,6 @@ function fetchUrl() {
             // display image after 
             displayImage();
         })
-
     });
 }
 
