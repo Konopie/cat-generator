@@ -6,8 +6,6 @@ var favoriteBtn2 = document.querySelector('#favorite2')
 var factBtn = document.querySelector("#fact-generator")
 var catFacts = document.querySelector('.cat-facts');
 var catPics = document.querySelector('.cat-picture');
-// **Bethany fetch cat facts
-var factBtn = document.querySelector("#fact-generator");
 
 // fetch cat facts
 function fetchFacts() {
@@ -38,9 +36,6 @@ function displayFact() {
 
 
 // fetch cat picture url
-
-//var catImageUrl = fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function(response) {
-//var catImageUrl = "thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294"
 function fetchUrl() {
     if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
         document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))
@@ -53,11 +48,8 @@ function fetchUrl() {
             // display image after 
             displayImage();
         })
-
     });
-};
-
-
+}
 
 // push custom image url into image handler
 function displayImage() {
@@ -71,9 +63,8 @@ function displayImage() {
     // append img to page
     document.getElementById('imageHandler').appendChild(img);
 }
-// *Bethany button event listener
+// fetch buttons
 factBtn.addEventListener("click", fetchFacts);
-
 picBtn.addEventListener("click", fetchUrl);
 
 //*Mackenzie-used JQuery to call the click function for favoritebutton1
@@ -81,7 +72,7 @@ $("#favorite1").click(function () {
     //grabs the (this)favoritebutton1 and the catFacts div
     var favoriteFact = $(this).catFacts
     //set the catFacts div to localStorage with the click of the favoriteBtn1
-    localStorage.setItem(favoriteBtn1, catFacts)
+    localStorage.setItem(favoriteBtn1, catFacts);
     //display localStorage catFacts in the favoritefact-container 
     var divElement = document.getElementById('favoritefact-container')
     divElement.innerHTML = catFacts;
@@ -99,7 +90,7 @@ $("#favorite2").click(function () {
     divElement.innerHTML = "<img src=" + catImageUrl + "></img>"
 });
 
-
+//Hope this works
 
 
 

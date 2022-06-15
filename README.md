@@ -5,14 +5,14 @@ The purpose of this group project was to create a front-end web application usin
 
 We decided to make something fun that would be interesting for cat fans to peruse to see entertaining images, videos, and gifs about cats along with random cat facts. 
 
-**User Story goes here - need any updates to reflect adjustments to project?
+User Story: AS A dog lover married to a cat lover....I WANT TO learn facts about cats and view funny images of cats....SO THAT I can learn to love cats as much as my partner loves cats.
 
 ### APIs
 We used "The Cat API" for the images on our application. https://apilist.fun/api/the-cat-api
 We used "Cat Facts API" for the facts. https://alexwohlbruck.github.io/cat-facts/?ref=apilist.fun
 
 ### CSS Framework
-**Forthcoming
+Bulma
 
 ### Client-Side Storage
 **Forthcoming

@@ -65,14 +65,14 @@ footer{
 }  
 
 #favoritefact-container{
-   
+    
         background: transparent;
         border: none;
         resize: none;
         color: #000000;
         border-left: 1px solid black;
         padding: 10px;
-      } 
+} 
 
 #favoritepic-container{
     height:auto;
