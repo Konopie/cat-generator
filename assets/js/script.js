@@ -91,7 +91,7 @@ $("#favorite2").click(function () {
     divElement.innerHTML = "<img src=" + catImageUrl + "></img>"
 });
 
-
+//Hope this works
 
 
 
