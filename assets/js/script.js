@@ -1,11 +1,11 @@
-         var picBtn = document.querySelector("#pic-generator");
+var picBtn = document.querySelector("#pic-generator");
 //**Mackenzie "Favorite" buttons
 var favoriteBtn1 = document.querySelector("#favorite1");
 var favoriteBtn2 = document.querySelector('#favorite2')
-//  "Cat Fact" button
-var factBtn = document.querySelector("#fact-generator")
 var catFacts = document.querySelector('.cat-facts');
 var catPics = document.querySelector('.cat-picture');
+// **Bethany fetch cat facts
+var factBtn = document.querySelector("#fact-generator");
 
 // fetch cat facts
 function fetchFacts() {
@@ -50,6 +50,23 @@ function fetchUrl() {
         })
     });
 }
+function fetchUrl() {
+    if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
+        document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))
+    };
+    fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            // set variable to fetched url
+            catImageUrl = data[0].url;
+            // display image after 
+            displayImage();
+        });
+    });
+};
+
+
+
 
 // push custom image url into image handler
 function displayImage() {
@@ -67,22 +84,40 @@ function displayImage() {
 factBtn.addEventListener("click", fetchFacts);
 picBtn.addEventListener("click", fetchUrl);
 
+
 //*Mackenzie-used JQuery to call the click function for favoritebutton1
-$("#favorite1").click(function () {
-    //grabs the (this)favoritebutton1 and the catFacts div
+$("#favorite1").click(function (event) {
+    event.preventDefault()
+    //grabs the(this) favoritebutton1 and the catFacts div
     var favoriteFact = $(this).catFacts
     //set the catFacts div to localStorage with the click of the favoriteBtn1
     localStorage.setItem(favoriteBtn1, catFacts);
     //display localStorage catFacts in the favoritefact-container 
+    localStorage.setItem('favoriteBtn1', catFacts)
+    //display localStorage catFacts in the favoritefact-container
     var divElement = document.getElementById('favoritefact-container')
-    divElement.innerHTML = catFacts;
-});
+    divElement.innerHTML = (catFacts);
+}
+);
+//sets the favorited fact so that it remains on html page after page refresh
+function showSavedFact() {
+    var fact = localStorage.getItem('favoriteBtn1');
+    var divElement = document.getElementById('favoritefact-container')
+    if (fact === null) {
+        divElement.innerHTML = "Favorite Facts Will Appear Here!"
+    } else {
+        divElement.innerHTML = fact
+    }
+}
+showSavedFact()
+
 //Mackenzie- used JQuery to call the click function for favoritebutton2
-$("#favorite2").click(function () {
+$("#favorite2").click(function (event) {
+    event.preventDefault()
     //grabs the (this) favoritebutton2 and the catImageUrl
     var favoritePics = $(this).catImageUrl
     //convert the catImageUrl to JSON string and set to localStorage
-    localStorage.setItem('catImageUrl', JSON.stringify(catImageUrl));
+    localStorage.setItem('favoriteBtn2', JSON.stringify(catImageUrl));
     //retrieve parsed catImageUrl from localStorage
     var retrievedCatPic = JSON.parse(localStorage.getItem('catImageUrl'));
     //display localStorage catImageUrl in the favoritepic-container
@@ -90,8 +125,14 @@ $("#favorite2").click(function () {
     divElement.innerHTML = "<img src=" + catImageUrl + "></img>"
 });
 
-//Hope this works
-
-
-
-
+//sets the favorited image so that it remains on html page after page refresh
+function getSavedImg() {
+    var retrievedCatPic = localStorage.getItem('favoriteBtn2');
+    var divElement = document.getElementById('favoritepic-container')
+    if (retrievedCatPic === null) {
+        divElement.innerHTML = "Favorite Image Will Appear Here!"
+    } else {
+        divElement.innerHTML = "<img src=" + retrievedCatPic + "></img>"
+    }
+}
+getSavedImg()
