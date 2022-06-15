@@ -63,6 +63,7 @@ function displayImage() {
     // append img to page
     document.getElementById('imageHandler').appendChild(img);
 }
+
 // fetch buttons
 factBtn.addEventListener("click", fetchFacts);
 picBtn.addEventListener("click", fetchUrl);
@@ -89,8 +90,6 @@ $("#favorite2").click(function () {
     var divElement = document.getElementById('favoritepic-container')
     divElement.innerHTML = "<img src=" + catImageUrl + "></img>"
 });
-
-//Hope this works
 
 
 
