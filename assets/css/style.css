@@ -40,8 +40,8 @@ img{
     position: absolute;
     width: 100%;
     
-
 }
+
 #subheading{
     position: absolute;
     margin-top: 70px;
@@ -110,7 +110,7 @@ footer{
 } 
 
 
-/* BETHANY ADDED */
+/* BETHANY ADDED- need to look at MEDIA Queries for Bulma */
 /* MEDIA QUERY- Smaller desktop screens and smaller */
 @media screen and (max-width: 980px) {
     img {
@@ -137,8 +137,9 @@ footer{
     
     #genieLamp2{
       display: none;
-    
+    }
 }
+
 
 /* MEDIA QUERY- Tablets and smaller */
 @media screen and (max-width: 768px) {
@@ -156,3 +157,4 @@ footer{
         max-height:200x; 
     }
 }
+
