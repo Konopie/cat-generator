@@ -25,6 +25,8 @@ footer{
         color: #000000;
         border-left: 1px solid black;
         padding: 10px;
+        display: flex;
+        flex: auto;
       } 
 
 #favoritepic-container{
@@ -32,4 +34,6 @@ footer{
     width: auto;
     max-width: 69vw;
     max-height: 42.0vh;
+    display: flex;
+        flex: auto;
 } 
