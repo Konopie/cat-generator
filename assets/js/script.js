@@ -80,6 +80,7 @@ function displayImage() {
     // append img to page
     document.getElementById('imageHandler').appendChild(img);
 }
+
 // fetch buttons
 factBtn.addEventListener("click", fetchFacts);
 picBtn.addEventListener("click", fetchUrl);
@@ -136,3 +137,4 @@ function getSavedImg() {
     }
 }
 getSavedImg()
+

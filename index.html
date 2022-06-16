@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link to css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Cat Genie Home</title>
 </head>
 
@@ -18,57 +18,47 @@
             <li><a href="">Home</a></li>
             <li><a href="">Menu</a></li>
             <li><a href="">About</a></li>
-            
-            
         </ul>
     </nav>
+
     <div>
-               <h1 id= "heading" class= "is-size-1 has-text-weight-bold has-text-warning has-background-danger-dark py-2 has-text-centered is-family-monospace is-italic">Cat Genie</h1>
-                <h2 id= "subheading" class= "is-size-5 has-text-warning has-background-danger-dark has-text-centered py-5 is-family-sans-serif">Where Your Wish For The Perfect Cat Comes True</h2>
-                <img src="./assets/images/lamp.png" alt="lamp image" style= "max-height: 90px" id="genieLamp">
-                <img src="./assets/images/lamp2.png" alt="second lamp image" style= "max-height: 90px" id="genieLamp2">
+        <h1 id= "heading" class= "is-size-1 has-text-weight-bold has-text-warning has-background-danger-dark py-2 has-text-centered is-family-monospace is-italic">Cat Genie</h1>
+        <h2 id= "subheading" class= "is-size-5 has-text-warning has-background-danger-dark has-text-centered py-5 is-family-sans-serif">Where Your Wish For The Perfect Cat Comes True</h2>
+        <img src="./assets/images/lamp.png" alt="lamp image" style= "max-height: 90px" id="genieLamp">
+        <img src="./assets/images/lamp2.png" alt="second lamp image" style= "max-height: 90px" id="genieLamp2">
     </div>
                 
-    <section>
-
-          <div class="cat-facts" id="factHandler">
-              <button id="fact-generator" class= "button is-danger is-light is-large is-responsive is-outlined">Cat Fact</button>
-              <button class="favorite button is-danger is-responsive is-outlined" id="favorite1">⭐</button>
+    <section class="catAPIs section is-medium columns is-mobile is-vcentered ">
+        <div class="column is-centered">
+            <div class="cat-facts" id="factHandler">
+                <button id="fact-generator" class= "btn button is-danger is-light is-large is-responsive is-outlined">Cat Fact</button>
+                <button class="favorite button is-danger is-responsive is-outlined" id="favorite1">⭐</button>
             </div>
+        </div>
+        <div class="column is-centered">
             <div class="cat-picture" id="imageHandler">
                 <button id="pic-generator" class="btn button is-danger is-light is-large is-responsive is-outlined">Cat Picture</button>
                 <button class="favorite button is-danger is-responsive is-outlined" id="favorite2">⭐</button>
             </div>
+        </div>
     </section>   
 
 
+    <!-- Favorites Container for Local Storage -->
+    <section class="favorites-container">
+        <h3 id="favoritetitle">Favorites</h3>
+        <div id="favoritefact-container"></div>
 
-    <div id="favoritefact-container">
+        <div id="favoritepic-container"></div>
+    </section>
 
-    </div>
-
-    <div id="favoritepic-container">
-
-    </div>
-
-    
-
-
-    
-          
-            
-    
-
-          
-    
-    
-  
 </body>
-<footer>
-    <div>
+
+    <footer>
+        <div>
         &copy; 2022 Cat Genie. All Rights Reserved.
-    </div>  
-</footer>
+        </div>  
+    </footer>
 
     <!-- link to javascript -->
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
