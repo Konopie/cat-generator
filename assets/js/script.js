@@ -52,7 +52,6 @@ function fetchUrl() {
 
 // push custom image url into image handler
 function displayImage() {
-
     // create img element
     var img = document.createElement('img');
     // set img to css class
