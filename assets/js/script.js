@@ -1,11 +1,10 @@
 var picBtn = document.querySelector("#pic-generator");
+var factBtn = document.querySelector("#fact-generator");
 //**Mackenzie "Favorite" buttons
 var favoriteBtn1 = document.querySelector("#favorite1");
 var favoriteBtn2 = document.querySelector('#favorite2')
 var catFacts = document.querySelector('.cat-facts');
 var catPics = document.querySelector('.cat-picture');
-// **Bethany fetch cat facts
-var factBtn = document.querySelector("#fact-generator");
 
 // fetch cat facts
 function fetchFacts() {
@@ -64,8 +63,6 @@ function fetchUrl() {
         });
     });
 };
-
-
 
 
 // push custom image url into image handler

@@ -11,51 +11,43 @@
     <title>Cat Genie Home</title>
 </head>
 
-<body> 
-    
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Menu</a></li>
-            <li><a href="">About</a></li>
-        </ul>
-    </nav>
-
-    <div>
-        <h1 id= "heading" class= "is-size-1 has-text-weight-bold has-text-warning has-background-danger-dark py-2 has-text-centered is-family-monospace is-italic">Cat Genie</h1>
-        <h2 id= "subheading" class= "is-size-5 has-text-warning has-background-danger-dark has-text-centered py-5 is-family-sans-serif">Where Your Wish For The Perfect Cat Comes True</h2>
+<body class="has-background-warning-light"> 
+    <div class="is-responsive has-background-danger-dark">
+        <h1 id= "heading" class= "is-size-1 has-text-weight-bold has-text-warning has-background-danger-dark py-2 has-text-centered is-family-monospace">Cat Genie</h1>
+        <h2 id= "subheading" class= "subtitle is-size-5 has-text-warning has-background-danger-dark has-text-centered py-5 is-family-sans-serif">Generating Cat Facts and Pictures at Your Command</h2>
        <!-- <img src="./assets/images/lamp.png" alt="lamp image" style= "max-height: 90px" id="genieLamp">
         <img src="./assets/images/lamp2.png" alt="second lamp image" style= "max-height: 90px" id="genieLamp2"> -->
-    </div>
+    </div> 
                 
-    <section class="catAPIs section is-medium columns is-mobile is-vcentered">
-        <div class="column is-centered">
+    <section class="catAPIs section is-medium columns is-mobile is-vcentered level">
+        <div class="column is-centered level-left">
             <div class="cat-facts" id="factHandler">
-                <button id="fact-generator" class= "btn button is-danger is-light is-large is-responsive is-outlined">Cat Fact</button>
-                <button class="favorite button is-danger is-responsive is-outlined" id="favorite1">⭐</button>
+                <button id="fact-generator" class= "button is-danger is-light is-large is-responsive is-outlined">Cat Fact</button>
+                <button class="favorite button is-danger-dark has-background-danger is-responsive is-outlined" id="favorite1">⭐</button>
             </div>
         </div>
-        <div class="column is-centered">
+        <div class="column is-centered level-right">
             <div class="cat-picture" id="imageHandler">
                 <button id="pic-generator" class="btn button is-danger is-light is-large is-responsive is-outlined">Cat Picture</button>
-                <button class="favorite button is-danger is-responsive is-outlined" id="favorite2">⭐</button>
+                <button class="favorite button is-danger-dark has-background-danger is-responsive is-outlined" id="favorite2">⭐</button>
             </div>
         </div>
     </section>   
 
 
-    <!-- Favorites Container for Local Storage -->
+    <!-- Favorites Container for Saving One Fact and One Image at a time in Local Storage -->
     <section class="favorites-container">
-        <h3 id="favoritetitle">Favorites</h3>
-        <div id="favoritefact-container"></div>
-
-        <div id="favoritepic-container"></div>
+        <div class="container is-responsive is-fluid">
+            <h3 class="title title-is-2 has-text-centered has-text-warning has-background-danger is-spaced" id="favoritetitle">⭐ Current Favorites ⭐</h3>
+            <div class="subtitle has-text-danger" id="favoritefact-container"></div>
+            <div class="has-text-danger" id="favoritepic-container"></div>
+        </div>
     </section>
 
 </body>
 
-    <footer>
-        <div>
+    <footer class="footer has-background-warning-light">
+        <div class="content has-text-centered 3rem 1.5rem 6rem">
         &copy; 2022 Cat Genie. All Rights Reserved.
         </div>  
     </footer>

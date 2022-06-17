@@ -1,8 +1,8 @@
-img{
+/*img{
     max-width:450px;
     max-height:450px;
 }
-
+/*
 .favorites    {
     line-height: 1.5;
     text-align: right;
@@ -14,7 +14,7 @@ img{
     /*margin-left: 700px;
     /* Bethany */
 
-}
+/*}
 
 #imageHandler{
     margin-top: 400px;
@@ -22,7 +22,7 @@ img{
     /*margin-left: 700px;
     /* Bethany */
 
-}
+/*}
 #genieLamp{
     width: 9%;
    position: absolute;
@@ -64,6 +64,8 @@ footer{
     flex-wrap: wrap;
 } 
 /* Bethany added, and removed duplicate of .favorites (see above) */
+/*
+
 .favorites-container {
     border: 2px solid crimson;
     display: flex;
@@ -75,6 +77,7 @@ footer{
     justify-items: center;
 }
 /* Bethany */
+/*
 .favorites-container h3 {
     justify-content: center;
     color: gold;
@@ -91,17 +94,17 @@ footer{
         /*color: #000000;
         /*border-left: 1px solid black;
         /* Bethany */
-        padding: 10px;
+       /* padding: 10px;
         margin: 10px;
 } 
-
+/*
 #favoritepic-container{
     height:auto;
     width: auto;
     max-width: 69vw;
     max-height: 42.0vh;
     /* Bethany */
-    padding: 10px;
+    /*padding: 10px;
     margin: 10px;
 } 
 
