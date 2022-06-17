@@ -24,5 +24,3 @@ We utilized favorte (star) buttons. The user can store one favorite fact and one
 ## Link to Deployed Website
 https://konopie.github.io/cat-generator/
 
-## Credits
-**Forthcoming
