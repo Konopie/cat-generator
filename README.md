@@ -19,8 +19,9 @@ https://bulma.io/
 We utilized favorte (star) buttons. The user can store one favorite fact and one favorite picture in the favorites local storage container at the bottom of the page.
 
 ## Image of the Live Website
-**Forthcoming
+![CatGen](https://user-images.githubusercontent.com/102879421/173997284-e011af4f-ed31-4eeb-9bd6-887fa9338c02.jpeg)
 
 ## Link to Deployed Website
 https://konopie.github.io/cat-generator/
+
 
