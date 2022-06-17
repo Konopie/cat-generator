@@ -1,11 +1,10 @@
 var picBtn = document.querySelector("#pic-generator");
+var factBtn = document.querySelector("#fact-generator");
 //**Mackenzie "Favorite" buttons
 var favoriteBtn1 = document.querySelector("#favorite1");
 var favoriteBtn2 = document.querySelector('#favorite2')
 var catFacts = document.querySelector('.cat-facts');
 var catPics = document.querySelector('.cat-picture');
-// **Bethany fetch cat facts
-var factBtn = document.querySelector("#fact-generator");
 
 // fetch cat facts
 function fetchFacts() {
@@ -22,7 +21,7 @@ function fetchFacts() {
     });
 }
 
-//  push cat fact into fact handler
+//  push cat fact object into fact handler
 function displayFact() {
     // create p element for facts
     var factText = document.createElement('p');
@@ -50,27 +49,9 @@ function fetchUrl() {
         })
     });
 }
-function fetchUrl() {
-    if (document.getElementById("imageHandler").contains(document.querySelector(".catImage"))) {
-        document.getElementById("imageHandler").removeChild(document.querySelector(".catImage"))
-    };
-    fetch("https://api.thecatapi.com/v1/images/search?api_key=0e2cc572-50b2-4f1f-b996-1ea6cc513294").then(function (response) {
-        response.json().then(function (data) {
-            console.log(data)
-            // set variable to fetched url
-            catImageUrl = data[0].url;
-            // display image after 
-            displayImage();
-        });
-    });
-};
-
-
-
 
 // push custom image url into image handler
 function displayImage() {
-
     // create img element
     var img = document.createElement('img');
     // set img to css class
